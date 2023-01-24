@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MatchDetailsActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMatchDetailsINDNZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/tvSeriesNameINDNZ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/india_tour_of_new_zealand_2019" />
+
+                <LinearLayout
+                    android:id="@+id/llTeamNameINDNZ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSeriesNameINDNZ">
+
+                    <TextView
+                        android:id="@+id/tvTeam1NameINDNZ"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        tools:text="India" />
+
+                    <TextView
+                        android:id="@+id/tvVSINDNZ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:textSize="16sp"
+                        android:text="vs"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvTeam2NameINDNZ"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="4dp"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        tools:text="New Zealand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDateTimeINDNZ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/llTeamNameINDNZ">
+
+                    <TextView
+                        android:id="@+id/tvDateINDNZ"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:textSize="16sp"
+                        tools:text="Tue,Jan 24" />
+
+                    <TextView
+                        android:id="@+id/tvTimeINDNZ"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="4dp"
+                        android:textSize="16sp"
+                        tools:text="01:30 pm" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvVenueINDNZ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/llDateTimeINDNZ"
+                    tools:text="Seddon Park, Hamilton" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue_gray_500"
+                    app:layout_constraintTop_toBottomOf="@+id/tvVenueINDNZ">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:gravity="end"
+                        android:padding="4dp"
+                        android:text="@string/view_more"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMatchDetailsSAPAK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvMatchDetailsINDNZ">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/tvSeriesNameSAPAK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/india_tour_of_new_zealand_2019" />
+
+                <LinearLayout
+                    android:id="@+id/llTeamNameSAPAK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSeriesNameSAPAK">
+
+                    <TextView
+                        android:id="@+id/tvTeam1NameSAPAK"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        tools:text="India" />
+
+                    <TextView
+                        android:id="@+id/tvVSSAPAK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:textSize="16sp"
+                        android:text="vs" />
+
+                    <TextView
+                        android:id="@+id/tvTeam2NameSAPAK"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="4dp"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        tools:text="New Zealand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDateTimeSAPAK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/llTeamNameSAPAK">
+
+                    <TextView
+                        android:id="@+id/tvDateSAPAK"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:textSize="16sp"
+                        tools:text="Tue,Jan 24" />
+
+                    <TextView
+                        android:id="@+id/tvTimeSAPAK"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="4dp"
+                        android:textSize="16sp"
+                        tools:text="01:30 pm" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvVenueSAPAK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/llDateTimeSAPAK"
+                    tools:text="Seddon Park, Hamilton" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue_gray_500"
+                    app:layout_constraintTop_toBottomOf="@+id/tvVenueSAPAK">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:gravity="end"
+                        android:padding="4dp"
+                        android:text="@string/view_more"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
