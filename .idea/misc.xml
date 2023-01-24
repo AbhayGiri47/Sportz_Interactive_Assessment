@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_match_details.xml" value="0.1984375" />
-        <entry key="app/src/main/res/layout/activity_player_details.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_player_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/customdialog.xml" value="0.13541666666666666" />
         <entry key="app/src/main/res/layout/item_match_details.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_player_details.xml" value="0.18" />

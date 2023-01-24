@@ -8,7 +8,7 @@ data class INDNZMatchDetailsResponse(
     @SerializedName("Matchdetail") var matchdetail: Matchdetail? = Matchdetail(),
     @SerializedName("Teams") var teams: Any
 
-    )
+)
 
 data class Matchdetail(
 
@@ -37,74 +37,6 @@ data class Venue(
 
 )
 
-data class TeamsINDNZ(
-
-    @SerializedName("4") var teamIndia: TeamIndia? = TeamIndia(),
-    @SerializedName("5") var teamNewZealand: TeamNewZealand? = TeamNewZealand()
-
-)
-
-
-data class TeamIndia(
-
-    @SerializedName("Name_Full") var nameFull: String? = null,
-    @SerializedName("Name_Short") var nameShort: String? = null,
-    @SerializedName("Players") var teamIndiaPlayers: TeamIndiaPlayers? = TeamIndiaPlayers()
-
-)
-
-data class TeamNewZealand(
-
-    @SerializedName("Name_Full") var nameFull: String? = null,
-    @SerializedName("Name_Short") var nameShort: String? = null,
-    @SerializedName("Players") var teamNewZealandPlayers: TeamNewZealandPlayers? = TeamNewZealandPlayers()
-
-)
-
-data class TeamIndiaPlayers(
-
-    @SerializedName("3632")
-    var player1: PlayerDetails? = PlayerDetails(),
-    @SerializedName("3722")
-    var player2: PlayerDetails? = PlayerDetails(),
-    @SerializedName("3852")
-    var player3: PlayerDetails? = PlayerDetails(),
-    @SerializedName("4176")
-    var player4: PlayerDetails? = PlayerDetails(),
-    @SerializedName("4532")
-    var player5: PlayerDetails? = PlayerDetails(),
-    @SerializedName("5132")
-    var player6: PlayerDetails? = PlayerDetails(),
-    @SerializedName("9844")
-    var player7: PlayerDetails? = PlayerDetails(),
-    @SerializedName("63187")
-    var player8: PlayerDetails? = PlayerDetails(),
-    @SerializedName("63751")
-    var player9: PlayerDetails? = PlayerDetails(),
-    @SerializedName("65867")
-    var player10: PlayerDetails? = PlayerDetails(),
-    @SerializedName("66818")
-    var player11: PlayerDetails? = PlayerDetails()
-
-)
-
-
-data class TeamNewZealandPlayers(
-
-    @SerializedName("3752") var player1: PlayerDetails? = PlayerDetails(),
-    @SerializedName("4330") var player2: PlayerDetails? = PlayerDetails(),
-    @SerializedName("4338") var player3: PlayerDetails? = PlayerDetails(),
-    @SerializedName("4964") var player4: PlayerDetails? = PlayerDetails(),
-    @SerializedName("10167") var player5: PlayerDetails? = PlayerDetails(),
-    @SerializedName("10172") var player6: PlayerDetails? = PlayerDetails(),
-    @SerializedName("11703") var player7: PlayerDetails? = PlayerDetails(),
-    @SerializedName("11706") var player8: PlayerDetails? = PlayerDetails(),
-    @SerializedName("57594") var player9: PlayerDetails? = PlayerDetails(),
-    @SerializedName("57903") var player10: PlayerDetails? = PlayerDetails(),
-    @SerializedName("60544") var player11: PlayerDetails? = PlayerDetails()
-
-)
-
 data class Team(
     val teamName: String,
     val players: List<Player>
@@ -123,30 +55,8 @@ data class Player(
     val position: String,
     val teamName: String,
     @SerializedName("Iscaptain")
-    val isCaptain :Boolean = false
+    val isCaptain: Boolean = false
 )
-
-/*data class Batting(
-    @SerializedName("Average")
-    val average: String,
-    @SerializedName("Runs")
-    val runs: String,
-    @SerializedName("Strikerate")
-    val strikerate: String,
-    @SerializedName("Style")
-    val style: String
-)
-
-data class Bowling(
-    @SerializedName("Average")
-    val average: String,
-    @SerializedName("Economyrate")
-    val economyrate: String,
-    @SerializedName("Style")
-    val style: String,
-    @SerializedName("Wickets")
-    val wickets: String
-)*/
 
 data class PlayerDetails(
 

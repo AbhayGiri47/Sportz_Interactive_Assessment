@@ -2,7 +2,6 @@ package com.example.sportzinteractive.ui
 
 import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -34,13 +33,13 @@ class PlayerDetailsActivity : AppCompatActivity() {
                 val dialog = Dialog(this)
                 dialog.setContentView(R.layout.customdialog)
 
-                if (it.bowling.average.equals("0")){
-                    val clBowling=dialog.findViewById<ConstraintLayout>(R.id.clBowlingDetails)
+                if (it.bowling.average.equals("0")) {
+                    val clBowling = dialog.findViewById<ConstraintLayout>(R.id.clBowlingDetails)
                     clBowling.visibility = View.GONE
                 }
 
-                if (it.batting.runs.equals("0")){
-                    val clBatting=dialog.findViewById<ConstraintLayout>(R.id.clBattingDetails)
+                if (it.batting.runs.equals("0")) {
+                    val clBatting = dialog.findViewById<ConstraintLayout>(R.id.clBattingDetails)
                     clBatting.visibility = View.GONE
                 }
 
@@ -51,7 +50,8 @@ class PlayerDetailsActivity : AppCompatActivity() {
                 battingAverage.text = resources.getString(R.string.Average, it.batting.average)
 
                 val battingStrikeRate = dialog.findViewById<TextView>(R.id.tvStrikeRate)
-                battingStrikeRate.text =resources.getString(R.string.StrikeRate, it.batting.strikeRate)
+                battingStrikeRate.text =
+                    resources.getString(R.string.StrikeRate, it.batting.strikeRate)
 
                 val battingRuns = dialog.findViewById<TextView>(R.id.tvRuns)
                 battingRuns.text = resources.getString(R.string.battingRuns, it.batting.runs)
@@ -60,13 +60,13 @@ class PlayerDetailsActivity : AppCompatActivity() {
                 bowlingStyle.text = resources.getString(R.string.Style, it.bowling.style)
 
                 val bowlingAverage = dialog.findViewById<TextView>(R.id.tvBowlingAverage)
-                bowlingAverage.text =resources.getString(R.string.Average, it.bowling.average)
+                bowlingAverage.text = resources.getString(R.string.Average, it.bowling.average)
 
                 val economyRate = dialog.findViewById<TextView>(R.id.tvEconomyRate)
                 economyRate.text = resources.getString(R.string.economyRate, it.bowling.economyRate)
 
                 val wickets = dialog.findViewById<TextView>(R.id.tvWickets)
-                wickets.text =resources.getString(R.string.wickets, it.bowling.wickets)
+                wickets.text = resources.getString(R.string.wickets, it.bowling.wickets)
 
                 dialog.show()
             }
@@ -76,13 +76,13 @@ class PlayerDetailsActivity : AppCompatActivity() {
                 val dialog = Dialog(this)
                 dialog.setContentView(R.layout.customdialog)
 
-                if (it.bowling.average.equals("0")){
-                    val clBowling=dialog.findViewById<ConstraintLayout>(R.id.clBowlingDetails)
+                if (it.bowling.average.equals("0")) {
+                    val clBowling = dialog.findViewById<ConstraintLayout>(R.id.clBowlingDetails)
                     clBowling.visibility = View.GONE
                 }
 
-                if (it.batting.runs.equals("0")){
-                    val clBatting=dialog.findViewById<ConstraintLayout>(R.id.clBattingDetails)
+                if (it.batting.runs.equals("0")) {
+                    val clBatting = dialog.findViewById<ConstraintLayout>(R.id.clBattingDetails)
                     clBatting.visibility = View.GONE
                 }
 
@@ -93,7 +93,8 @@ class PlayerDetailsActivity : AppCompatActivity() {
                 battingAverage.text = resources.getString(R.string.Average, it.batting.average)
 
                 val battingStrikeRate = dialog.findViewById<TextView>(R.id.tvStrikeRate)
-                battingStrikeRate.text =resources.getString(R.string.StrikeRate, it.batting.strikeRate)
+                battingStrikeRate.text =
+                    resources.getString(R.string.StrikeRate, it.batting.strikeRate)
 
                 val battingRuns = dialog.findViewById<TextView>(R.id.tvRuns)
                 battingRuns.text = resources.getString(R.string.battingRuns, it.batting.runs)
@@ -102,14 +103,16 @@ class PlayerDetailsActivity : AppCompatActivity() {
                 bowlingStyle.text = resources.getString(R.string.Style, it.bowling.style)
 
                 val bowlingAverage = dialog.findViewById<TextView>(R.id.tvBowlingAverage)
-                bowlingAverage.text =resources.getString(R.string.Average, it.bowling.average)
+                bowlingAverage.text = resources.getString(R.string.Average, it.bowling.average)
 
                 val economyRate = dialog.findViewById<TextView>(R.id.tvEconomyRate)
                 economyRate.text = resources.getString(R.string.economyRate, it.bowling.economyRate)
 
                 val wickets = dialog.findViewById<TextView>(R.id.tvWickets)
-                wickets.text =resources.getString(R.string.wickets, it.bowling.wickets)
+                wickets.text = resources.getString(R.string.wickets, it.bowling.wickets)
 
+                dialog.setCancelable(true);
+                dialog.setCanceledOnTouchOutside(true);
                 dialog.show()
             }
         )
@@ -156,10 +159,9 @@ class PlayerDetailsActivity : AppCompatActivity() {
         binding.rvTeam2PlayerDetails.adapter = team2PlayerAdapter
 
 
-
     }
 
-    companion object{
+    companion object {
         private const val TAG = "PlayerDetailsActivity"
     }
 }

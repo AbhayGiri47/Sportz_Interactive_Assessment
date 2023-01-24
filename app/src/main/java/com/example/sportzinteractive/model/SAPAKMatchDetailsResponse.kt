@@ -1,4 +1,5 @@
 package com.example.sportzinteractive.model
+
 import com.google.gson.annotations.SerializedName
 
 

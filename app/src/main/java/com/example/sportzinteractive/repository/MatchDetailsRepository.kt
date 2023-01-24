@@ -4,7 +4,7 @@ import com.example.sportzinteractive.network.RetrofitInterface
 
 class MatchDetailsRepository {
 
-    suspend fun getINDNZMatchDetails ()= RetrofitInterface.getInstance().getINDNZMatchDetails()
+    suspend fun getINDNZMatchDetails() = RetrofitInterface.getInstance().getINDNZMatchDetails()
 
-    suspend fun getSAPAkMatchDetails ()= RetrofitInterface.getInstance().getSAPAKMatchDetails()
+    suspend fun getSAPAkMatchDetails() = RetrofitInterface.getInstance().getSAPAKMatchDetails()
 }

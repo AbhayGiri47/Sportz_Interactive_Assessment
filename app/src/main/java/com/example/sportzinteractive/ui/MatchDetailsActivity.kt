@@ -29,7 +29,7 @@ class MatchDetailsActivity : AppCompatActivity() {
 
         })
 
-        viewModel.teams.observe(this@MatchDetailsActivity){
+        viewModel.teams.observe(this@MatchDetailsActivity) {
             binding.tvTeam1NameINDNZ.text = it[0].teamName
             binding.tvTeam2NameINDNZ.text = it[1].teamName
         }
@@ -44,20 +44,20 @@ class MatchDetailsActivity : AppCompatActivity() {
             binding.tvVenueSAPAK.text = it.matchdetail?.venue?.name
         })
 
-        viewModel.teams1.observe(this@MatchDetailsActivity){
+        viewModel.teams1.observe(this@MatchDetailsActivity) {
             binding.tvTeam1NameSAPAK.text = it[0].teamName
             binding.tvTeam2NameSAPAK.text = it[1].teamName
         }
 
         binding.cvMatchDetailsINDNZ.setOnClickListener {
-            val intent=Intent(this,PlayerDetailsActivity::class.java)
-            intent.putExtra("teamName","INDNZ")
+            val intent = Intent(this, PlayerDetailsActivity::class.java)
+            intent.putExtra("teamName", "INDNZ")
             startActivity(intent)
         }
 
         binding.cvMatchDetailsSAPAK.setOnClickListener {
-            val intent=Intent(this,PlayerDetailsActivity::class.java)
-            intent.putExtra("teamName","SAPAK")
+            val intent = Intent(this, PlayerDetailsActivity::class.java)
+            intent.putExtra("teamName", "SAPAK")
             startActivity(intent)
         }
     }

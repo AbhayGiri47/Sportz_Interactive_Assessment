@@ -1,6 +1,5 @@
 package com.example.sportzinteractive.network
 
-import android.net.sip.SipErrorCode.TIME_OUT
 import com.example.sportzinteractive.model.INDNZMatchDetailsResponse
 import com.example.sportzinteractive.model.SAPAKMatchDetailsResponse
 import com.example.sportzinteractive.util.Constants
@@ -15,14 +14,14 @@ import java.util.concurrent.TimeUnit
 interface RetrofitInterface {
 
     @GET("nzin01312019187360.json")
-    suspend fun getINDNZMatchDetails():Response<INDNZMatchDetailsResponse>
+    suspend fun getINDNZMatchDetails(): Response<INDNZMatchDetailsResponse>
 
     @GET("sapk01222019186652.json")
-    suspend fun getSAPAKMatchDetails():Response<SAPAKMatchDetailsResponse>
+    suspend fun getSAPAKMatchDetails(): Response<SAPAKMatchDetailsResponse>
 
     companion object {
         var retrofitInterface: RetrofitInterface? = null
-        fun getInstance() : RetrofitInterface {
+        fun getInstance(): RetrofitInterface {
 
             val interceptor = HttpLoggingInterceptor()
             interceptor.level = HttpLoggingInterceptor.Level.BODY

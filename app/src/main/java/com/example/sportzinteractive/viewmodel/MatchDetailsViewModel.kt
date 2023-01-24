@@ -1,7 +1,10 @@
 package com.example.sportzinteractive.viewmodel
 
 import android.util.Log
-import androidx.lifecycle.*
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.sportzinteractive.model.INDNZMatchDetailsResponse
 import com.example.sportzinteractive.model.Player
 import com.example.sportzinteractive.model.SAPAKMatchDetailsResponse
@@ -10,47 +13,46 @@ import com.example.sportzinteractive.repository.MatchDetailsRepository
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
 import org.json.JSONObject
-import java.lang.Exception
 
-class MatchDetailsViewModel: ViewModel() {
+class MatchDetailsViewModel : ViewModel() {
 
     val repository = MatchDetailsRepository()
     val temp1Teams = mutableListOf<Team>()
     val temp2Teams = mutableListOf<Team>()
 
 
-    private var _INDNZMatchDetails = MutableLiveData <INDNZMatchDetailsResponse>()
+    private var _INDNZMatchDetails = MutableLiveData<INDNZMatchDetailsResponse>()
     val INDNZMatchDetail: LiveData<INDNZMatchDetailsResponse> = _INDNZMatchDetails
 
-    private var _SAPAKMatchDetails = MutableLiveData <SAPAKMatchDetailsResponse>()
+    private var _SAPAKMatchDetails = MutableLiveData<SAPAKMatchDetailsResponse>()
     val SAPAKMatchDetail: LiveData<SAPAKMatchDetailsResponse> = _SAPAKMatchDetails
 
-    private var _teams= MutableLiveData<List<Team>>()
-    val teams :LiveData<List<Team>> = _teams
+    private var _teams = MutableLiveData<List<Team>>()
+    val teams: LiveData<List<Team>> = _teams
 
-    private var _teams1= MutableLiveData<List<Team>>()
-    val teams1 :LiveData<List<Team>> = _teams1
+    private var _teams1 = MutableLiveData<List<Team>>()
+    val teams1: LiveData<List<Team>> = _teams1
 
 
-    fun getINDNZMatchDetails(){
+    fun getINDNZMatchDetails() {
         viewModelScope.launch {
-           try {
-               val result=  repository.getINDNZMatchDetails()
-               if (result.body() != null){
-                   _INDNZMatchDetails.value = result.body()
-                   parseMatchDetails(result.body()!!)
-               }
-           }catch (e:Exception){
-               print(e.message)
-           }
+            try {
+                val result = repository.getINDNZMatchDetails()
+                if (result.body() != null) {
+                    _INDNZMatchDetails.value = result.body()
+                    parseMatchDetails(result.body()!!)
+                }
+            } catch (e: Exception) {
+                print(e.message)
+            }
 
         }
     }
 
-    fun getSAPAKMatchDetails(){
+    fun getSAPAKMatchDetails() {
         viewModelScope.launch {
-            val result=  repository.getSAPAkMatchDetails()
-            if (result.body() != null){
+            val result = repository.getSAPAkMatchDetails()
+            if (result.body() != null) {
                 _SAPAKMatchDetails.value = result.body()
                 parseMatchDetails(result.body()!!)
             }

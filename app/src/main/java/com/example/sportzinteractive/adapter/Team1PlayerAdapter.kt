@@ -1,13 +1,11 @@
 package com.example.sportzinteractive.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sportzinteractive.R
 import com.example.sportzinteractive.databinding.ItemPlayerDetailsBinding
 import com.example.sportzinteractive.model.Player
-import com.example.sportzinteractive.model.PlayerDetails
 
 
 class Team1PlayerAdapter(
@@ -27,16 +25,19 @@ class Team1PlayerAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        if (list.get(position).isCaptain && list.get(position).iskeeper){
-            holder.playerName.text =holder.itemView.context.resources.getString(
-                R.string.cwk, list.get(position).nameFull )
-        }else if (list.get(position).iskeeper){
-            holder.playerName.text =  holder.itemView.context.resources.getString(
-                R.string.wicketkeeper, list.get(position).nameFull )
-        }else if (list.get(position).isCaptain ){
+        if (list.get(position).isCaptain && list.get(position).iskeeper) {
             holder.playerName.text = holder.itemView.context.resources.getString(
-                R.string.captain, list.get(position).nameFull )
-        }else{
+                R.string.cwk, list.get(position).nameFull
+            )
+        } else if (list.get(position).iskeeper) {
+            holder.playerName.text = holder.itemView.context.resources.getString(
+                R.string.wicketkeeper, list.get(position).nameFull
+            )
+        } else if (list.get(position).isCaptain) {
+            holder.playerName.text = holder.itemView.context.resources.getString(
+                R.string.captain, list.get(position).nameFull
+            )
+        } else {
             holder.playerName.text = list.get(position).nameFull
         }
         holder.playerName.setOnClickListener {
